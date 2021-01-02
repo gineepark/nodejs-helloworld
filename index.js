@@ -1,9 +1,7 @@
 var express = require('express'); //설치한 express mudule을 불러와서 express변수에 담는다
 var app = express(); //express를 실행하여 app object를 초기화 한다
 
-app.get('/', function(req, res){ //'/'위치에 'get'요청을 받는 경우
-  res.send('Hello World!'); //'hello world!'를 보낸다
-});
+app.use(express.static(__dirname + '/public'));
 
 var port = 3000; //사용할 포트 번호를 port변수에 담는다
 
